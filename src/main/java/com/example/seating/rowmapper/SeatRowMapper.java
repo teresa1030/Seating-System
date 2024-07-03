@@ -1,4 +1,23 @@
 package com.example.seating.rowmapper;
 
-public class SeatRowMapper {
+import com.example.seating.model.Seat;
+import org.springframework.jdbc.core.RowMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class SeatRowMapper implements RowMapper<Seat> {
+
+    @Override
+    public Seat mapRow(ResultSet resultSet, int i) throws SQLException {
+
+        Seat seat = new Seat();
+
+        seat.setSeatId(resultSet.getInt("floor_seat_seq"));
+        seat.setFloorNo(resultSet.getInt("floor_no"));
+        seat.setSeatNo(resultSet.getInt("seat_no"));
+
+        return seat;
+    }
+
 }
