@@ -134,6 +134,7 @@ export default {
 .container {
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 .floorSeats {
   margin: auto;

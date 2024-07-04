@@ -1,0 +1,2 @@
+INSERT INTO employeeInfo(name, email,seat_id) VALUES ("小明", "1234@gmail.com",2);
+INSERT INTO employeeInfo(name, email,seat_id) VALUES ("小美", "5678@gmail.com",3);
