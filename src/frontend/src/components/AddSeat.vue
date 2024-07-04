@@ -60,7 +60,6 @@ export default {
 </script>
 
 <style scoped>
-/* 组件样式 */
 .addSeat {
   max-width: 300px;
   margin: 0 auto;

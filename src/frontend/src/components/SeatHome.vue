@@ -158,7 +158,6 @@ export default {
   margin: 10px;
   font-weight: bold;
   border-radius: 6px;
-  passing:5 px;
   cursor: pointer;
 }
 .seatStyle .has-employee {
