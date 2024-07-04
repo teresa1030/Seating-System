@@ -1,0 +1,7 @@
+create table seatInfo
+(
+    floor_seat_seq int auto_increment
+        primary key,
+    floor_no       int not null,
+    seat_no        int not null
+);
