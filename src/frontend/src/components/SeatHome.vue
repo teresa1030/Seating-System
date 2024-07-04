@@ -10,7 +10,6 @@
       </select>
     </div>
     <div v-for="floor in uniqueFloors" :key="floor">
-<!--      <h2>樓層 {{ floor }}</h2>-->
       <div class="floorSeats">
         <div class="seatStyle">
           <ul >

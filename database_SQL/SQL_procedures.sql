@@ -35,3 +35,9 @@ BEGIN
     VALUES (p_floorNo, p_seatNo);
     SELECT LAST_INSERT_ID() AS floor_seat_seq;
 END;
+
+CREATE PROCEDURE CreateEmployee( IN p_userId INT, IN p_name VARCHAR(32), IN p_email VARCHAR(32), IN p_seatId INT)
+BEGIN
+    INSERT INTO employeeInfo (emp_id, name, email, seat_id)
+    VALUES (p_userId, p_name, p_email, p_seatId);
+END;

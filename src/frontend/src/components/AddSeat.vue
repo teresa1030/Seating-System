@@ -4,10 +4,10 @@
     <div class="addSeat">
       <form @submit.prevent="addSeat">
         <label for="title">樓層編號：</label>
-        <input type="text" id="floorNo" v-model="newSeat.floorNo" required>
+        <input type="number" id="floorNo" v-model="newSeat.floorNo" required>
 
         <label for="author">座位編號：</label>
-        <input type="text" id="seatNo" v-model="newSeat.seatNo" required>
+        <input type="number" id="seatNo" v-model="newSeat.seatNo" required>
 
         <button type="submit">新增座位</button>
       </form>
@@ -84,6 +84,9 @@ button {
   margin-top: 50px;
   width: 150px;
   margin-left:70px;
+  border-radius: 6px;
+  font-weight: bold;
+  padding : 5px;
 }
 button:hover {
   opacity: 0.8;

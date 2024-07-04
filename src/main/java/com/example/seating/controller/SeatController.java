@@ -48,6 +48,18 @@ public class SeatController {
         return ResponseEntity.status(HttpStatus.CREATED).body(seat);
     }
 
+    @PostMapping("/api/employees")
+    public ResponseEntity<Employee> createEmployee(@RequestBody EmployeeRequest empRequest) {
+        Employee employee = seatService.getEmployeeById(empRequest.getUserId());
+        if (employee != null) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
+        }
+        seatService.createEmployee(empRequest);
+        Employee newEmployee = seatService.getEmployeeById(empRequest.getUserId());
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(newEmployee);
+    }
+
     @PutMapping("/api/employees/{userId}")
     public ResponseEntity<Employee> updateSeat(@PathVariable Integer userId,
                                            @RequestBody EmployeeRequest empRequest) {

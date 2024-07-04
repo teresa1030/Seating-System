@@ -36,6 +36,10 @@ public class SeatServiceImpl implements SeatService {
     public Integer createSeat(SeatRequest seatRequest) {
         return seatDao.createSeat(seatRequest);
     }
+    @Override
+    public void createEmployee(EmployeeRequest empRequest) {
+        seatDao.createEmployee(empRequest);
+    }
 
     @Override
     public void updateSeat(Integer userId, EmployeeRequest empRequest) {

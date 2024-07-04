@@ -16,6 +16,7 @@ public interface SeatDao {
     Seat getSeatById(Integer seatId);
 
     Integer createSeat(SeatRequest seatRequest);
+    void createEmployee(EmployeeRequest empRequest);
 
     void updateSeat(Integer userId, EmployeeRequest empRequest);
 

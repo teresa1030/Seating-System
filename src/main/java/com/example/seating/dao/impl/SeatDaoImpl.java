@@ -7,7 +7,6 @@ import com.example.seating.model.Employee;
 import com.example.seating.rowmapper.EmployeeRowMapper;
 import com.example.seating.rowmapper.SeatRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.SqlOutParameter;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -138,6 +137,28 @@ public class SeatDaoImpl implements SeatDao{
         } else {
             throw new RuntimeException("Failed to retrieve generated seatId from stored procedure");
         }
+    }
+
+    @Override
+    public void createEmployee(EmployeeRequest empRequest) {
+        SimpleJdbcCall jdbcCall = new SimpleJdbcCall(namedParameterJdbcTemplate.getJdbcTemplate())
+                .withProcedureName("CreateEmployee")
+                .declareParameters(
+                        new SqlParameter("p_userId", Types.INTEGER),
+                        new SqlParameter("p_name", Types.VARCHAR),
+                        new SqlParameter("p_email", Types.VARCHAR),
+                        new SqlParameter("p_seatId", Types.INTEGER)
+                );
+
+        MapSqlParameterSource paramMap = new MapSqlParameterSource()
+                .addValue("p_userId", empRequest.getUserId())
+                .addValue("p_name", empRequest.getName())
+                .addValue("p_email", empRequest.getEamil())
+                .addValue("p_seatId", empRequest.getSeatId());
+
+        Map<String, Object> result = jdbcCall.execute(paramMap);
+        System.out.println("Result from stored procedure: " + result);
+
     }
 
     @Override
