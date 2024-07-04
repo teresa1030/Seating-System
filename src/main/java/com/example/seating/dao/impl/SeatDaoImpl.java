@@ -104,14 +104,6 @@ public class SeatDaoImpl implements SeatDao{
 
     @Override
     public Integer createSeat(SeatRequest seatRequest) {
-//        String sql = "INSERT INTO seatInfo(floor_no, seat_no) " +
-//                "VALUES (:floorNo, :SeatNo)";
-//        Map<String, Object> map = new HashMap<>();
-//        map.put("floorNo", seatRequest.getFloorNo());
-//        map.put("SeatNo", seatRequest.getSeatNo());
-//        KeyHolder keyHolder = new GeneratedKeyHolder();
-//        namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource(map), keyHolder);
-//        int seatId = keyHolder.getKey().intValue();
         SimpleJdbcCall jdbcCall = new SimpleJdbcCall(namedParameterJdbcTemplate.getJdbcTemplate())
                 .withProcedureName("CreateSeat")
                 .declareParameters(
