@@ -18,6 +18,19 @@
 
 https://github.com/teresa1030/Seating-System/assets/51694712/56ce116b-3f95-415d-a34d-76f4cdd4af5b
 
+### 系統Demo - 新增座位
+
+
+
+https://github.com/teresa1030/Seating-System/assets/51694712/803ae6cc-9023-4ce3-9787-a3c7dc7875e2
+
+
+
+### 系統Demo - 新增員工
+
+
+https://github.com/teresa1030/Seating-System/assets/51694712/91ede034-0c3c-45de-8b4e-099f80352118
+
 
 
 ### 參考資料
