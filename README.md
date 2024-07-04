@@ -2,7 +2,9 @@
 後端使用Java SpringBoot建立、前端使用Vue.js開發一個簡易版的員工座位系統
 
 ## 功能介紹
-
+ * 新增座位
+ * 新增員工
+ * 更改員工座位
 
 ## 開發環境
 後端
@@ -12,7 +14,7 @@
 前端
   * Vue.js
 
-### 系統Demo
+### 系統Demo - 更改員工座位
 
 https://github.com/teresa1030/Seating-System/assets/51694712/56ce116b-3f95-415d-a34d-76f4cdd4af5b
 
