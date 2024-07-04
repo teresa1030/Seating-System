@@ -16,7 +16,9 @@ public class SeatRowMapper implements RowMapper<Seat> {
         seat.setSeatId(resultSet.getInt("floor_seat_seq"));
         seat.setFloorNo(resultSet.getInt("floor_no"));
         seat.setSeatNo(resultSet.getInt("seat_no"));
-
+//        System.out.println("Mapping seatId: " + resultSet.getInt("floor_seat_seq"));
+//        System.out.println("Mapping floorNo: " + resultSet.getInt("floor_no"));
+//        System.out.println("Mapping seatNo: " + resultSet.getInt("seat_no"));
         return seat;
     }
 

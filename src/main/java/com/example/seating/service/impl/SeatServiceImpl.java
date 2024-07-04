@@ -1,6 +1,8 @@
 package com.example.seating.service.impl;
 
 import com.example.seating.dao.SeatDao;
+import com.example.seating.dto.EmployeeRequest;
+import com.example.seating.model.Employee;
 import com.example.seating.model.Seat;
 import com.example.seating.service.SeatService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,5 +17,18 @@ public class SeatServiceImpl implements SeatService {
     @Override
     public List<Seat> getAllSeats() {
         return seatDao.getAllSeats();
+    }
+    @Override
+    public List<Employee> getAllEmployees() {
+        return seatDao.getAllEmployees();
+    }
+    @Override
+    public Employee getEmployeeById(Integer userId) {
+        return seatDao.getEmployeeById(userId);
+    }
+
+    @Override
+    public void updateSeat(Integer userId, EmployeeRequest empRequest) {
+        seatDao.updateSeat(userId, empRequest);
     }
 }
