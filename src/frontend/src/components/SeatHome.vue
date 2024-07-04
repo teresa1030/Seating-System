@@ -142,6 +142,11 @@ export default {
 .seatStyle ul{
   display: inline-block;
 }
+.container select{
+  width: 200px;
+  height: 30px;
+  border-radius: 6px;
+}
 .seatStyle li {
   width: 250px;
   float: left;
@@ -164,6 +169,7 @@ export default {
 .options{
   display: inline-block;
   margin-bottom: 30px;
+  margin-top: 70px;
 }
 .options span{
   float: left;
@@ -186,6 +192,14 @@ export default {
 .seatStyle .selected {
   background-color: #02C874;
 }
-
+.container button{
+  width: 100px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin: 8px;
+  padding : 5px;
+  border:none;
+  cursor: pointer;
+}
 
 </style>

@@ -1,6 +1,7 @@
 package com.example.seating.controller;
 
 import com.example.seating.dto.EmployeeRequest;
+import com.example.seating.dto.SeatRequest;
 import com.example.seating.model.Employee;
 import com.example.seating.model.Seat;
 import com.example.seating.service.SeatService;
@@ -9,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -38,15 +40,17 @@ public class SeatController {
         }
     }
 
+    @PostMapping("/api/seats")
+    public ResponseEntity<Seat> createSeat(@RequestBody SeatRequest seatRequest) {
+        Integer seatId = seatService.createSeat(seatRequest);
+        Seat seat = seatService.getSeatById(seatId);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(seat);
+    }
+
     @PutMapping("/api/employees/{userId}")
     public ResponseEntity<Employee> updateSeat(@PathVariable Integer userId,
                                            @RequestBody EmployeeRequest empRequest) {
-
-//        Vote vote = voteService.getVoteById(voteId);
-//
-//        if (vote == null) {
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-//        }
 
         seatService.updateSeat(userId, empRequest);
 
